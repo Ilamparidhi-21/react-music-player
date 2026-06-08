@@ -3,11 +3,13 @@ frontend:
   phases:
     preBuild:
       commands:
-        - nvm install 16
-        - nvm use 16
+        - nvm install 16.20.2
+        - nvm use 16.20.2
+        - node -v
         - yarn install
     build:
       commands:
+        - node -v
         - yarn run build
   artifacts:
     baseDirectory: build
